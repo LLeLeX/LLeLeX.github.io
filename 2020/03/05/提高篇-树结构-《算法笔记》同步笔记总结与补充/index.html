@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 算法初步 | LLeLeX&#39;s Blog</title>
+  <title>提高篇-树结构-《算法笔记》同步笔记总结与补充 | LLeLeX&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="LLeLeX&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/tags/%E7%AE%97%E6%B3%95%E5%88%9D%E6%AD%A5/index.html">
+  <meta name="description" content="可解问题题目中正儿八经构造一颗树的题目不多，但关于运用树的思想却很多，一定要熟练掌握！尤其是树结构在并查集，堆，这些数据结构实用且高效。  树的遍历：树的前中后层序遍历（已知两种遍历求其他遍历结果）树的深搜广搜二叉树的建立 二叉搜索树：二叉搜索树的遍历二叉搜索树中序遍历的性质">
+<meta property="og:type" content="article">
+<meta property="og:title" content="提高篇-树结构-《算法笔记》同步笔记总结与补充">
+<meta property="og:url" content="http://yoursite.com/2020/03/05/%E6%8F%90%E9%AB%98%E7%AF%87-%E6%A0%91%E7%BB%93%E6%9E%84-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/index.html">
 <meta property="og:site_name" content="LLeLeX&#39;s Blog">
+<meta property="og:description" content="可解问题题目中正儿八经构造一颗树的题目不多，但关于运用树的思想却很多，一定要熟练掌握！尤其是树结构在并查集，堆，这些数据结构实用且高效。  树的遍历：树的前中后层序遍历（已知两种遍历求其他遍历结果）树的深搜广搜二叉树的建立 二叉搜索树：二叉搜索树的遍历二叉搜索树中序遍历的性质">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-03-05T07:57:07.000Z">
+<meta property="article:modified_time" content="2020-03-05T07:58:25.200Z">
 <meta property="article:author" content="LLeLeX">
+<meta property="article:tag" content="算法总结">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="LLeLeX&#39;s Blog" type="application/atom+xml">
@@ -156,65 +161,229 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-提高篇-树结构-《算法笔记》同步笔记总结与补充" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
-        </span>
-<a href="/2020/03/02/%E7%AE%97%E6%B3%95%E5%88%9D%E6%AD%A5-%E6%8E%92%E5%BA%8F-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" class="archive-article-date">
-  	<time datetime="2020-03-02T13:01:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-02</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/02/%E7%AE%97%E6%B3%95%E5%88%9D%E6%AD%A5-%E6%8E%92%E5%BA%8F-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/">算法初步-排序-《算法笔记》同步笔记总结与补充</a>
+    <h1 class="article-title" itemprop="name">
+      提高篇-树结构-《算法笔记》同步笔记总结与补充
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        
+	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+<a href="/2020/03/05/%E6%8F%90%E9%AB%98%E7%AF%87-%E6%A0%91%E7%BB%93%E6%9E%84-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" class="archive-article-date">
+  	<time datetime="2020-03-05T07:57:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-05</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="可解问题"><a href="#可解问题" class="headerlink" title="可解问题"></a>可解问题</h1><p>题目中正儿八经构造一颗树的题目不多，但关于运用树的思想却很多，一定要熟练掌握！尤其是树结构在<strong>并查集，堆</strong>，这些数据结构实用且高效。</p>
+<ul>
+<li><strong>树的遍历</strong>：<br><a href="https://blog.csdn.net/weixin_44343282/article/details/104553696" target="_blank" rel="noopener">树的前中后层序遍历（已知两种遍历求其他遍历结果）</a><br><a href="https://blog.csdn.net/weixin_44343282/article/details/104575889" target="_blank" rel="noopener">树的深搜广搜</a><br><a href="https://blog.csdn.net/weixin_44343282/article/details/104563156" target="_blank" rel="noopener">二叉树的建立</a></li>
+<li><strong>二叉搜索树</strong>：<br><a href="https://blog.csdn.net/weixin_44343282/article/details/104594224" target="_blank" rel="noopener">二叉搜索树的遍历</a><br><a href="https://blog.csdn.net/weixin_44343282/article/details/104598692" target="_blank" rel="noopener">二叉搜索树中序遍历的性质</a><a id="more"></a></li>
+<li><strong>完全二叉树</strong>：<br><a href="https://blog.csdn.net/weixin_44343282/article/details/104602807" target="_blank" rel="noopener">完全二叉树的静态存储和性质</a></li>
+<li><strong>平衡二叉树</strong>：<br><a href="https://blog.csdn.net/weixin_44343282/article/details/104611516" target="_blank" rel="noopener">平衡二叉树的基本操作</a></li>
+<li><strong>并查集</strong>：查找合并的用途<br><a href="https://blog.csdn.net/weixin_44343282/article/details/104631125" target="_blank" rel="noopener">并查集的基本操作 &amp;&amp; 树结构节点与边的数量关系</a><br><a href="https://blog.csdn.net/weixin_44343282/article/details/104639858" target="_blank" rel="noopener">并查集的优化，高效</a></li>
+<li><strong>堆</strong>：常用来实现优先队列，优先队列可实现哈夫曼树<br><a href="https://blog.csdn.net/weixin_44343282/article/details/104652348" target="_blank" rel="noopener">堆排序</a><br><a href="https://blog.csdn.net/weixin_44343282/article/details/104657619" target="_blank" rel="noopener">大小顶堆</a><h1 id="专题要点："><a href="#专题要点：" class="headerlink" title="专题要点："></a>专题要点：</h1></li>
+<li>树的动态结构和静态结构，以及子树表示（二叉树：左右子节点，一般树：vector子节点序列）</li>
+<li><strong>完全二叉树的性质</strong>：<ul>
+<li>可以使用一维数组顺序存放（直接按规律递归访问即可，无需使用结构体指明左右子节点和数据域，而且不需要用-1来代表空树！）</li>
+<li>一维数组顺序存放的序列，即为完全二叉树层序遍历的结果</li>
+<li>判断完全二叉树的<strong>叶子节点</strong>：root * 2 &gt; n（下标为root的左子节点大于节点总个数n）<!--more--><br>原因：因为右子节点下标一定大于左子节点，且所有叶子节点均在n内，若该节点左子节点已经超出数据范围，则右子节点一定也超出了</li>
+<li>判断完全二叉树的<strong>空节点</strong>：root &gt; n（当前节点下标大于节点总个数n）<br>原因：叶子节点即二叉树的最后一层节点一定在数据范围n内，若当前节点root超出n，说明连叶子节点都不是，则必为空树。</li>
+</ul>
+</li>
+<li><strong>平衡二叉树的左旋右旋和树型的关系</strong>：左旋右旋是调整树型的措施。根据具体根节点和子节点的平衡因子，判断当前二叉搜索树的树型，采用对应的左旋右旋操作来调整树结构，使其达到平衡二叉树的结构。</li>
+<li><a href="https://blog.csdn.net/weixin_44343282/article/details/104640690" target="_blank" rel="noopener"><strong>并查集</strong></a>：高效查找合并（由于内容较多，另写了一篇做详细介绍）</li>
+<li><strong>树与堆与优先队列</strong>：优先队列的本质是堆，堆的本质是树</li>
+<li><strong>哈夫曼树与堆</strong>：哈夫曼树的实现要借助于小顶堆</li>
+</ul>
+<h1 id="几点注意："><a href="#几点注意：" class="headerlink" title="几点注意："></a>几点注意：</h1><ul>
+<li><strong>root在二叉树的静态结构和动态结构的区别</strong>：<ul>
+<li>数据类型的区别：动态结构为结构体指针（Node*）；静态结构中为int类型</li>
+<li>含义的区别：动态结构中，root为节点在内存中的地址；静态结构中root为节点在结构体数组中的下标。</li>
+<li>访问内部元素的区别：动态结构中，结构体指针可直接访问内部元素（root-&gt;lchild），静态结构中只能通过数组访问元素（nodes[root].lchild）</li>
+</ul>
+</li>
+<li><strong>结构体指针变量,root == NULL与</strong> <strong>*root == NULL的区别</strong>：<br>root == NULL：表示地址为NULL，代表空树</li>
+<li>root == NULL：表示地址所包含的内容为空，也许节点地址存在，但内容为空（地址存在就不能说明是空树了）</li>
+<li><strong>root在递归代码中的含义</strong>：在代码中，root并非一个树真正的根节点，==root指代递归后，所访问到的当前节点==</li>
+<li><strong>结构体指针变量的构造函数</strong>: ==必须使用初始化表赋值==<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> v;</span><br><span class="line">	<span class="keyword">int</span> height;</span><br><span class="line">	node*lchild, *rchild;</span><br><span class="line">	node()&#123;&#125;</span><br><span class="line">	node(<span class="keyword">int</span> x):v(x),height(<span class="number">1</span>),lchild(<span class="literal">NULL</span>),rchild(<span class="literal">NULL</span>)&#123;&#125;</span><br><span class="line">	<span class="comment">//要用初始化表，直接赋值不知道为什么会出错</span></span><br><span class="line">	<span class="comment">/*//!!!!!!!!!报错!!!!!!!</span></span><br><span class="line"><span class="comment">	node(int x)</span></span><br><span class="line"><span class="comment">	&#123;</span></span><br><span class="line"><span class="comment">		v = x;</span></span><br><span class="line"><span class="comment">		height = 1;</span></span><br><span class="line"><span class="comment">		lchild = NULL;</span></span><br><span class="line"><span class="comment">		rchild = NULL;</span></span><br><span class="line"><span class="comment">	&#125;</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">&#125;;</span><br><span class="line">node* root = <span class="keyword">new</span> node(x);<span class="comment">//root仍为结构体指针变量，因此构造函数前要加new</span></span><br></pre></td></tr></table></figure></li>
+<li><strong>插入，删除，左旋，右旋等操作的形参需要引用</strong>：因为这些操作是需要直接修改节点的内部元素或结构。</li>
+<li><strong>遍历</strong>：树的dfs等价于先根遍历，bfs等价于层序遍历</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              打赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>Thanks<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法初步</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法总结</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/05/%E6%8F%90%E9%AB%98%E7%AF%87-%E6%A0%91%E7%BB%93%E6%9E%84-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/03/03/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%B6%E6%9F%A5%E9%9B%86%EF%BC%88%E6%A0%91%E7%BB%93%E6%9E%84%E7%AB%A0%E8%8A%82%EF%BC%89-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">提高篇-并查集（树结构章节）-《算法笔记》同步笔记总结与补充</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#可解问题"><span class="toc-number">1.</span> <span class="toc-text">可解问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#专题要点："><span class="toc-number">2.</span> <span class="toc-text">专题要点：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#几点注意："><span class="toc-number">3.</span> <span class="toc-text">几点注意：</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
   
 
-    
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -247,9 +416,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
@@ -318,6 +487,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">算法总结</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">思路梳理</a>
               </li>
              
@@ -326,15 +499,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">算法总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">经验总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">算法初步</a>
               </li>
             
             <div class="clearfix"></div>

@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>提高篇-并查集（树结构章节）-《算法笔记》同步笔记总结与补充 | LLeLeX&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="专题要点：并查集即集合，其主要作用为:合并与查找  并查集可以抽象为树结构，并具有与树类似的性质如：具有根节点的概念，结构无环并满足（N个结点N-1条边，下文题目通信系统用到这一特性） 并查集初始化的意义：对元素顺序赋值进行初始化。即将所有的元素视为相互独立的集合，便于之后的合并数组（合并只对不同集合的元素进行合并） 并查集的数据结构father[]的含义：第i个元素的根节点为father[i]，">
+  <meta name="description" content="专题要点：并查集即集合，其主要作用为:合并与查找  并查集可以抽象为树结构，并具有与树类似的性质如：具有根节点的概念，结构无环并满足（N个结点N-1条边，下文题目通信系统用到这一特性）  并查集初始化的意义：对元素顺序赋值进行初始化。即将所有的元素视为相互独立的集合，便于之后的合并数组（合并只对不同集合的元素进行合并）  并查集的数据结构father[]的含义：第i个元素的根节点为father[i">
 <meta property="og:type" content="article">
 <meta property="og:title" content="提高篇-并查集（树结构章节）-《算法笔记》同步笔记总结与补充">
 <meta property="og:url" content="http://yoursite.com/2020/03/03/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%B6%E6%9F%A5%E9%9B%86%EF%BC%88%E6%A0%91%E7%BB%93%E6%9E%84%E7%AB%A0%E8%8A%82%EF%BC%89-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/index.html">
 <meta property="og:site_name" content="LLeLeX&#39;s Blog">
-<meta property="og:description" content="专题要点：并查集即集合，其主要作用为:合并与查找  并查集可以抽象为树结构，并具有与树类似的性质如：具有根节点的概念，结构无环并满足（N个结点N-1条边，下文题目通信系统用到这一特性） 并查集初始化的意义：对元素顺序赋值进行初始化。即将所有的元素视为相互独立的集合，便于之后的合并数组（合并只对不同集合的元素进行合并） 并查集的数据结构father[]的含义：第i个元素的根节点为father[i]，">
+<meta property="og:description" content="专题要点：并查集即集合，其主要作用为:合并与查找  并查集可以抽象为树结构，并具有与树类似的性质如：具有根节点的概念，结构无环并满足（N个结点N-1条边，下文题目通信系统用到这一特性）  并查集初始化的意义：对元素顺序赋值进行初始化。即将所有的元素视为相互独立的集合，便于之后的合并数组（合并只对不同集合的元素进行合并）  并查集的数据结构father[]的含义：第i个元素的根节点为father[i">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-03-03T12:47:09.000Z">
-<meta property="article:modified_time" content="2020-03-03T12:48:26.053Z">
+<meta property="article:modified_time" content="2020-03-05T08:01:40.237Z">
 <meta property="article:author" content="LLeLeX">
 <meta property="article:tag" content="算法总结">
 <meta name="twitter:card" content="summary">
@@ -188,9 +188,14 @@
       
         <h1 id="专题要点："><a href="#专题要点：" class="headerlink" title="专题要点："></a>专题要点：</h1><p><strong>并查集即集合，其主要作用为:合并与查找</strong></p>
 <ul>
-<li><strong>并查集可以抽象为树结构</strong>，并具有与树类似的性质如：具有根节点的概念，结构无环并满足（N个结点N-1条边，下文题目通信系统用到这一特性）</li>
-<li><strong>并查集初始化的意义</strong>：对元素顺序赋值进行初始化。即将所有的元素视为相互独立的集合，便于之后的合并数组（合并只对不同集合的元素进行合并）</li>
-<li><strong>并查集的数据结构father[]的含义</strong>：第i个元素的根节点为father[i]，通过<strong>路径压缩</strong>，将father[]中父节点更新完根节点，提高查找效率<!--moer--></li>
+<li><p><strong>并查集可以抽象为树结构</strong>，并具有与树类似的性质如：具有根节点的概念，结构无环并满足（N个结点N-1条边，下文题目通信系统用到这一特性）</p>
+</li>
+<li><p><strong>并查集初始化的意义</strong>：对元素顺序赋值进行初始化。即将所有的元素视为相互独立的集合，便于之后的合并数组（合并只对不同集合的元素进行合并）</p>
+</li>
+<li><p><strong>并查集的数据结构father[]的含义</strong>：第i个元素的根节点为father[i]，通过<strong>路径压缩</strong>，将father[]中父节点更新完根节点，提高查找效率</p>
+<a id="more"></a>
+
+</li>
 </ul>
 <h1 id="可解问题："><a href="#可解问题：" class="headerlink" title="可解问题："></a>可解问题：</h1><p>题目来自Codeup<br><a href="https://blog.csdn.net/weixin_44343282/article/details/104631125" target="_blank" rel="noopener">通信系统</a><br><a href="https://blog.csdn.net/weixin_44343282/article/details/104639858" target="_blank" rel="noopener">More is better</a></p>
 <h1 id="几点注意："><a href="#几点注意：" class="headerlink" title="几点注意："></a>几点注意：</h1><ul>
@@ -310,6 +315,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/03/05/%E6%8F%90%E9%AB%98%E7%AF%87-%E6%A0%91%E7%BB%93%E6%9E%84-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          提高篇-树结构-《算法笔记》同步笔记总结与补充
+        
+      </div>
+    </a>
   
   
     <a href="/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2BFS-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" id="article-nav-older" class="article-nav-link-wrap">
@@ -463,6 +477,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">算法总结</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">思路梳理</a>
               </li>
              
@@ -471,15 +489,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">算法总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">经验总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">算法初步</a>
               </li>
             
             <div class="clearfix"></div>
