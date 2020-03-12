@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>提高篇-广度优先搜索BFS-《算法笔记》同步笔记总结与补充 | LLeLeX&#39;s Blog</title>
+  <title>提高篇-最短路径问题（图论）-《算法笔记》同步笔记总结与补充 | LLeLeX&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="bfs算法比较高效，由于需要使用队列容器，可能会导致运行速度不太乐观 可解问题：bfs适合解决最少步数的问题。一维跳棋八数码问题迷宫最小步数">
+  <meta name="description" content="专题要点： 无负环的单源最短路径 Dijkstra（配合dfs，优先队列优化）   一般单源最短路径 Dijkstra Bellman-Ford SPFA">
 <meta property="og:type" content="article">
-<meta property="og:title" content="提高篇-广度优先搜索BFS-《算法笔记》同步笔记总结与补充">
-<meta property="og:url" content="http://yoursite.com/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2BFS-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/index.html">
+<meta property="og:title" content="提高篇-最短路径问题（图论）-《算法笔记》同步笔记总结与补充">
+<meta property="og:url" content="http://yoursite.com/2020/03/12/%E6%8F%90%E9%AB%98%E7%AF%87-%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98%EF%BC%88%E5%9B%BE%E8%AE%BA%EF%BC%89-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/index.html">
 <meta property="og:site_name" content="LLeLeX&#39;s Blog">
-<meta property="og:description" content="bfs算法比较高效，由于需要使用队列容器，可能会导致运行速度不太乐观 可解问题：bfs适合解决最少步数的问题。一维跳棋八数码问题迷宫最小步数">
+<meta property="og:description" content="专题要点： 无负环的单源最短路径 Dijkstra（配合dfs，优先队列优化）   一般单源最短路径 Dijkstra Bellman-Ford SPFA">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-03-02T13:11:15.000Z">
-<meta property="article:modified_time" content="2020-03-02T13:11:43.257Z">
+<meta property="article:published_time" content="2020-03-12T03:16:56.000Z">
+<meta property="article:modified_time" content="2020-03-12T03:21:55.348Z">
 <meta property="article:author" content="LLeLeX">
 <meta property="article:tag" content="算法总结">
 <meta name="twitter:card" content="summary">
@@ -161,14 +161,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-提高篇-广度优先搜索BFS-《算法笔记》同步笔记总结与补充" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-提高篇-最短路径问题（图论）-《算法笔记》同步笔记总结与补充" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      提高篇-广度优先搜索BFS-《算法笔记》同步笔记总结与补充
+      提高篇-最短路径问题（图论）-《算法笔记》同步笔记总结与补充
     </h1>
   
 
@@ -177,8 +177,8 @@
 	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
-<a href="/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2BFS-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" class="archive-article-date">
-  	<time datetime="2020-03-02T13:11:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-02</time>
+<a href="/2020/03/12/%E6%8F%90%E9%AB%98%E7%AF%87-%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98%EF%BC%88%E5%9B%BE%E8%AE%BA%EF%BC%89-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" class="archive-article-date">
+  	<time datetime="2020-03-12T03:16:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-12</time>
 </a>
 
         
@@ -186,20 +186,54 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>bfs算法比较高效，由于需要使用队列容器，可能会导致运行速度不太乐观</p>
-<h1 id="可解问题："><a href="#可解问题：" class="headerlink" title="可解问题："></a>可解问题：</h1><p>bfs适合解决最少步数的问题。<br><a href="https://blog.csdn.net/weixin_44343282/article/details/104472618" target="_blank" rel="noopener">一维跳棋</a><br><a href="https://blog.csdn.net/weixin_44343282/article/details/104491392" target="_blank" rel="noopener">八数码问题</a><br><a href="https://blog.csdn.net/weixin_44343282/article/details/104510750" target="_blank" rel="noopener">迷宫最小步数</a></p>
-<a id="more"></a>
-
-<h1 id="专题要点："><a href="#专题要点：" class="headerlink" title="专题要点："></a>专题要点：</h1><p>在使用bfs时，思考方式<strong>从节点存储的数据</strong>、<strong>边界</strong>、<strong>入队的节点</strong>（哪些节点入队）、<strong>状态压缩</strong>、<strong>状态转移</strong>、<strong>判重</strong>这几方面入手。</p>
+        <h1 id="专题要点："><a href="#专题要点：" class="headerlink" title="专题要点："></a>专题要点：</h1><ul>
+<li><strong>无负环的单源最短路径</strong><ul>
+<li>Dijkstra（配合dfs，优先队列优化）</li>
+</ul>
+</li>
+<li><strong>一般单源最短路径</strong><ul>
+<li>Dijkstra</li>
+<li>Bellman-Ford</li>
+<li>SPFA <a id="more"></a></li>
+</ul>
+</li>
+<li><strong>全源最短路径</strong><ul>
+<li>Floyd</li>
+<li>暴力：对每个顶点做一次Dijkstra<h1 id="可解问题："><a href="#可解问题：" class="headerlink" title="可解问题："></a>可解问题：</h1></li>
+</ul>
+</li>
+<li><strong>基础问题（第一标尺）</strong>：最短路径</li>
+<li><strong>引申问题（第二标尺）</strong>：<strong>边权花费数组c[]</strong>，<strong>点权资源数组w[]</strong>，<strong>最短路径条数num[]</strong>，<strong>路径上的结点数目pt[]</strong>，<strong>前驱结点记录pre[]</strong>；</li>
+</ul>
+<p>==基础问题（求最短路径）是第一标尺，其余引申问题是第二标尺，求最短路径使用Dijkstra算法，过程中使用pre[]存储，dfs搜索pre[]以解决第二标尺问题。PS：第二标尺涉及复杂计算的话，<strong>其实就是模拟题</strong>==</p>
 <ul>
-<li><strong>节点</strong>：bfs大多需要节点存储其所在的层数step（即步数）,队首元素的step+1即为当前节点的step，然后入队。除此之外可根据题意存储坐标，序列状态，序列hash值等。</li>
-<li><strong>边界</strong>：根据题意来判断何时跳出while循环，如序列满足题目要求或是迷宫到达终点或是计数器达到一定值。</li>
-<li><strong>入队节点</strong>：即哪些节点入队，或者说队列中存储的是什么，对什么进行搜索遍历。一般要考虑与当前节点直接相连的点（有关联的点、能直接到达，直接遍历到的点），并且满足条件（在规定范围内）即可入队。</li>
-<li><strong>状态压缩</strong>：将复杂的数据压缩成简单的数据结构（降维），以方便遍历过程中的访问和修改。类似八数码问题，将3*3矩阵压缩成一维字符串或者数组进行存储。</li>
-<li><strong>状态转移</strong>：此处的状态转移是指遍历的方向和过程，如迷宫的上下左右四个方向，跳棋的左右两个格子，并将其转换为坐标的形式 ，以便进行查找访问。</li>
-<li><strong>判重</strong>：此处为入队判重而非访问判重。区别在于：<ul>
-<li><strong>判重代码的位置区别</strong>：入队判重是在入队后就执行判重代码，访问判重是在访问到队首元素后再执行判重代码。</li>
-<li><strong>对bfs过程的影响</strong>：如果设置成是否已被访问，有可能在某个节点正在队列中（但还未访问）时由于其他节点可以到达它而将这个节点再次入队，导致很多节点反复入队。<br>因此要对已入队的结点进行标记，防止重复访问。</li>
+<li><a href="https://blog.csdn.net/weixin_44343282/article/details/104740757" target="_blank" rel="noopener">全网最全！PAT甲组1003.Emergency (优先队列实现迪杰斯特拉算法，Bellman算法，SPFA)思路与注意点–补充《算法笔记》</a></li>
+<li><a href="https://blog.csdn.net/weixin_44343282/article/details/104785790" target="_blank" rel="noopener">PAT甲组1072.Gas Station思路与注意点–补充《算法笔记》</a></li>
+<li><a href="https://blog.csdn.net/weixin_44343282/article/details/104777174" target="_blank" rel="noopener">PAT甲组1018.Public Bike Management思路与注意点–补充《算法笔记》</a><h1 id="编程总是忽视的问题"><a href="#编程总是忽视的问题" class="headerlink" title="编程总是忽视的问题"></a>编程总是忽视的问题</h1></li>
+<li><strong>Dijkstra最外层循环N次（N为顶点数）的含义</strong>：为了将所有顶点都访问到，<strong>并在循环体中用vis[]标记</strong>；循环体内再执行，找出最短边，更新最短路径的操作。</li>
+<li><strong>dfs逆向遍历，逆向输出</strong>：对pre[]dfs时，由于递归的性质是逆向遍历的，叶子节点（边界）即为<strong>源点</strong>，在边界对路径点权边权计算时，<strong>切记要逆序访问vector&lt; int &gt;tempPath</strong></li>
+<li><strong>dfs仍然过程中要记得特有的反向操作</strong><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tempPath.push_back(v);</span><br><span class="line">……</span><br><span class="line">tempPath.pop_back();</span><br></pre></td></tr></table></figure></li>
+<li><strong>访问邻接矩阵，Dijkstra访问与当前顶点相连的点</strong>：一定要先判断边是否存在if(!vis[v] &amp;&amp; G[u][v])，不然有的边不存在（G[u][v] == 0）会错误更新最短距离</li>
+<li><strong>访问邻接表，vector路径的循环变量i的含义</strong>：i并不代表另一个顶点，另一个顶点存储在vector[i]中，<strong>i只是循环变量</strong>，是辅助获取顶点值的作用</li>
+<li><strong>计算平均值</strong>：两种方法，一是一边循环一边求平均值，而是循环加和之后再求平均值，<a href="https://blog.csdn.net/weixin_44343282/article/details/104785790" target="_blank" rel="noopener">但是做题时遇到点情况</a></li>
+<li><strong>可能边循环边求平均值是首选吧？？目前还在存疑*</strong><h1 id="几点注意："><a href="#几点注意：" class="headerlink" title="几点注意："></a>几点注意：</h1></li>
+<li>要得到具体路径，必须通过pre[]和dfs（递归）思想，注意是<strong>逆向访问</strong>（即从终点访问到起点）==此方法最为保险（对于Dijkstra,Bellman,SPFA）==</li>
+<li><strong>单一Dijkstra（不对多条最短路径进行dfs）</strong>：<ul>
+<li>要根据题目要求增减<strong>边权花费数组c[]</strong>，<strong>点权资源数组w[]</strong>，<strong>最短路径条数num[]</strong>，<strong>路径上的结点数目pt[]</strong>，<strong>前驱结点记录pre[]</strong>；</li>
+<li>==要注意各个数据结构的初始化问题==</li>
+</ul>
+</li>
+<li><strong>Dijkstra + dfs</strong>：<strong>==解第二标尺首选==</strong><ul>
+<li><strong>前提</strong>：声明前驱结点集合vector<int> pre[maxn]，方能进行dfs</li>
+<li>访问路径过程中要用tempPath记录路径中的结点（逆向记录）</li>
+<li>增加对完整路径计算tempValue与最优值optValue对比，将最优值所在的tempPath存储到最优路径optPath中</li>
+<li>由于递归访问时逆向记录的（tempPath.size() - 1是起点），计算点权边权时最好倒叙访问 for(int i = tempPath.size() - 1; i &gt;= 0; i–)</li>
+</ul>
+</li>
+<li><strong>全源最短路径</strong>：对比Floyed和暴力Dijkstra，其时间复杂度均为O(N^3^)，但计算量有所不同。<ul>
+<li><strong><a href="https://blog.csdn.net/weixin_44343282/article/details/104772168" target="_blank" rel="noopener">效果对比</a></strong></li>
+<li>Dijkstra过程中很多路径和结果计算是重复的，虽然时间复杂度相同，但运算量相差很多；</li>
+<li>Dijkstra需要更多的空间复杂度，Floyd不需要邻接矩阵或邻接表，vis[]数组</li>
 </ul>
 </li>
 </ul>
@@ -303,7 +337,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2BFS-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/12/%E6%8F%90%E9%AB%98%E7%AF%87-%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98%EF%BC%88%E5%9B%BE%E8%AE%BA%EF%BC%89-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -317,18 +351,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/03/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%B6%E6%9F%A5%E9%9B%86%EF%BC%88%E6%A0%91%E7%BB%93%E6%9E%84%E7%AB%A0%E8%8A%82%EF%BC%89-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/03/12/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%9B%BE%E8%AE%BA-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          提高篇-并查集（树结构章节）-《算法笔记》同步笔记总结与补充
+          提高篇-图论-《算法笔记》同步笔记总结与补充
         
       </div>
     </a>
   
   
-    <a href="/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2DFS%E4%B8%8E%E5%89%AA%E6%9E%9D-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">提高篇-深度优先搜索DFS与剪枝-《算法笔记》同步笔记总结与补充</div>
+    <a href="/2020/03/05/%E6%8F%90%E9%AB%98%E7%AF%87-%E6%A0%91%E7%BB%93%E6%9E%84-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">提高篇-树结构-《算法笔记》同步笔记总结与补充</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -355,7 +389,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#可解问题："><span class="toc-number">1.</span> <span class="toc-text">可解问题：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#专题要点："><span class="toc-number">2.</span> <span class="toc-text">专题要点：</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#专题要点："><span class="toc-number">1.</span> <span class="toc-text">专题要点：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#可解问题："><span class="toc-number">2.</span> <span class="toc-text">可解问题：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#编程总是忽视的问题"><span class="toc-number">3.</span> <span class="toc-text">编程总是忽视的问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#几点注意："><span class="toc-number">4.</span> <span class="toc-text">几点注意：</span></a></li></ol>
                     </div>
                 </span>
             </div>

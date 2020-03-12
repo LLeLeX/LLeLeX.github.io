@@ -6,19 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>提高篇-广度优先搜索BFS-《算法笔记》同步笔记总结与补充 | LLeLeX&#39;s Blog</title>
+  <title>Archives: 2020 | LLeLeX&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="bfs算法比较高效，由于需要使用队列容器，可能会导致运行速度不太乐观 可解问题：bfs适合解决最少步数的问题。一维跳棋八数码问题迷宫最小步数">
-<meta property="og:type" content="article">
-<meta property="og:title" content="提高篇-广度优先搜索BFS-《算法笔记》同步笔记总结与补充">
-<meta property="og:url" content="http://yoursite.com/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2BFS-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="LLeLeX&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/archives/2020/page/3/index.html">
 <meta property="og:site_name" content="LLeLeX&#39;s Blog">
-<meta property="og:description" content="bfs算法比较高效，由于需要使用队列容器，可能会导致运行速度不太乐观 可解问题：bfs适合解决最少步数的问题。一维跳棋八数码问题迷宫最小步数">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-03-02T13:11:15.000Z">
-<meta property="article:modified_time" content="2020-03-02T13:11:43.257Z">
 <meta property="article:author" content="LLeLeX">
-<meta property="article:tag" content="算法总结">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="LLeLeX&#39;s Blog" type="application/atom+xml">
@@ -161,219 +156,57 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-提高篇-广度优先搜索BFS-《算法笔记》同步笔记总结与补充" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      提高篇-广度优先搜索BFS-《算法笔记》同步笔记总结与补充
-    </h1>
-  
-
-        
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	
 	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
-<a href="/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2BFS-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" class="archive-article-date">
-  	<time datetime="2020-03-02T13:11:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-02</time>
+<a href="/2020/02/29/hello-world/" class="archive-article-date">
+  	<time datetime="2020-02-29T12:20:09.743Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-29</time>
 </a>
 
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>bfs算法比较高效，由于需要使用队列容器，可能会导致运行速度不太乐观</p>
-<h1 id="可解问题："><a href="#可解问题：" class="headerlink" title="可解问题："></a>可解问题：</h1><p>bfs适合解决最少步数的问题。<br><a href="https://blog.csdn.net/weixin_44343282/article/details/104472618" target="_blank" rel="noopener">一维跳棋</a><br><a href="https://blog.csdn.net/weixin_44343282/article/details/104491392" target="_blank" rel="noopener">八数码问题</a><br><a href="https://blog.csdn.net/weixin_44343282/article/details/104510750" target="_blank" rel="noopener">迷宫最小步数</a></p>
-<a id="more"></a>
-
-<h1 id="专题要点："><a href="#专题要点：" class="headerlink" title="专题要点："></a>专题要点：</h1><p>在使用bfs时，思考方式<strong>从节点存储的数据</strong>、<strong>边界</strong>、<strong>入队的节点</strong>（哪些节点入队）、<strong>状态压缩</strong>、<strong>状态转移</strong>、<strong>判重</strong>这几方面入手。</p>
-<ul>
-<li><strong>节点</strong>：bfs大多需要节点存储其所在的层数step（即步数）,队首元素的step+1即为当前节点的step，然后入队。除此之外可根据题意存储坐标，序列状态，序列hash值等。</li>
-<li><strong>边界</strong>：根据题意来判断何时跳出while循环，如序列满足题目要求或是迷宫到达终点或是计数器达到一定值。</li>
-<li><strong>入队节点</strong>：即哪些节点入队，或者说队列中存储的是什么，对什么进行搜索遍历。一般要考虑与当前节点直接相连的点（有关联的点、能直接到达，直接遍历到的点），并且满足条件（在规定范围内）即可入队。</li>
-<li><strong>状态压缩</strong>：将复杂的数据压缩成简单的数据结构（降维），以方便遍历过程中的访问和修改。类似八数码问题，将3*3矩阵压缩成一维字符串或者数组进行存储。</li>
-<li><strong>状态转移</strong>：此处的状态转移是指遍历的方向和过程，如迷宫的上下左右四个方向，跳棋的左右两个格子，并将其转换为坐标的形式 ，以便进行查找访问。</li>
-<li><strong>判重</strong>：此处为入队判重而非访问判重。区别在于：<ul>
-<li><strong>判重代码的位置区别</strong>：入队判重是在入队后就执行判重代码，访问判重是在访问到队首元素后再执行判重代码。</li>
-<li><strong>对bfs过程的影响</strong>：如果设置成是否已被访问，有可能在某个节点正在队列中（但还未访问）时由于其他节点可以到达它而将这个节点再次入队，导致很多节点反复入队。<br>因此要对已入队的结点进行标记，防止重复访问。</li>
-</ul>
-</li>
-</ul>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              打赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>Thanks<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/wechat.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法总结</a>
-        		</li>
-      		
-		</ul>
-	</div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/02/29/hello-world/">Hello World</a>
+    </h1>
+  
 
-      
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2BFS-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/03/03/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%B6%E6%9F%A5%E9%9B%86%EF%BC%88%E6%A0%91%E7%BB%93%E6%9E%84%E7%AB%A0%E8%8A%82%EF%BC%89-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          提高篇-并查集（树结构章节）-《算法笔记》同步笔记总结与补充
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2DFS%E4%B8%8E%E5%89%AA%E6%9E%9D-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">提高篇-深度优先搜索DFS与剪枝-《算法笔记》同步笔记总结与补充</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#可解问题："><span class="toc-number">1.</span> <span class="toc-text">可解问题：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#专题要点："><span class="toc-number">2.</span> <span class="toc-text">专题要点：</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
+    </div></section>
   
 
-  
-
-  
-
-  
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2020/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2020/">1</a><a class="page-number" href="/archives/2020/page/2/">2</a><span class="page-number current">3</span>
+    </nav>
   
 
 
@@ -407,8 +240,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
