@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>提高篇-广度优先搜索BFS-《算法笔记》同步笔记总结与补充 | LLeLeX&#39;s Blog</title>
+  <title>入门篇-数学问题-《算法笔记》同步笔记总结与补充 | LLeLeX&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="bfs算法比较高效，由于需要使用队列容器，可能会导致运行速度不太乐观 可解问题：bfs适合解决最少步数的问题。一维跳棋八数码问题迷宫最小步数">
+  <meta name="description" content="专题要点： 编程实现数学算法：如欧几里得算法（最大公约数gcd） 模拟运算法则：如有理数（分数Fraction）四则运算，大整数（高精度）运算，更要注意细节的处理 取模，除法的思想：取模用于取某一数位的数值，除法用于分解原数（在进制转换和分解质因数运用） 判断素数的方法 根号枚举法—— 能否整除2~sqrt(n) 用素数打表得到的bool isPrime[]数组判断">
 <meta property="og:type" content="article">
-<meta property="og:title" content="提高篇-广度优先搜索BFS-《算法笔记》同步笔记总结与补充">
-<meta property="og:url" content="http://yoursite.com/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2BFS-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/index.html">
+<meta property="og:title" content="入门篇-数学问题-《算法笔记》同步笔记总结与补充">
+<meta property="og:url" content="http://yoursite.com/2020/03/17/%E5%85%A5%E9%97%A8%E7%AF%87-%E6%95%B0%E5%AD%A6%E9%97%AE%E9%A2%98-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/index.html">
 <meta property="og:site_name" content="LLeLeX&#39;s Blog">
-<meta property="og:description" content="bfs算法比较高效，由于需要使用队列容器，可能会导致运行速度不太乐观 可解问题：bfs适合解决最少步数的问题。一维跳棋八数码问题迷宫最小步数">
+<meta property="og:description" content="专题要点： 编程实现数学算法：如欧几里得算法（最大公约数gcd） 模拟运算法则：如有理数（分数Fraction）四则运算，大整数（高精度）运算，更要注意细节的处理 取模，除法的思想：取模用于取某一数位的数值，除法用于分解原数（在进制转换和分解质因数运用） 判断素数的方法 根号枚举法—— 能否整除2~sqrt(n) 用素数打表得到的bool isPrime[]数组判断">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-03-02T13:11:15.000Z">
-<meta property="article:modified_time" content="2020-03-02T13:11:43.257Z">
+<meta property="article:published_time" content="2020-03-17T03:30:16.000Z">
+<meta property="article:modified_time" content="2020-03-17T03:30:53.732Z">
 <meta property="article:author" content="LLeLeX">
 <meta property="article:tag" content="算法总结">
 <meta name="twitter:card" content="summary">
@@ -161,14 +161,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-提高篇-广度优先搜索BFS-《算法笔记》同步笔记总结与补充" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-入门篇-数学问题-《算法笔记》同步笔记总结与补充" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      提高篇-广度优先搜索BFS-《算法笔记》同步笔记总结与补充
+      入门篇-数学问题-《算法笔记》同步笔记总结与补充
     </h1>
   
 
@@ -177,8 +177,8 @@
 	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
-<a href="/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2BFS-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" class="archive-article-date">
-  	<time datetime="2020-03-02T13:11:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-02</time>
+<a href="/2020/03/17/%E5%85%A5%E9%97%A8%E7%AF%87-%E6%95%B0%E5%AD%A6%E9%97%AE%E9%A2%98-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" class="archive-article-date">
+  	<time datetime="2020-03-17T03:30:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-17</time>
 </a>
 
         
@@ -186,20 +186,96 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>bfs算法比较高效，由于需要使用队列容器，可能会导致运行速度不太乐观</p>
-<h1 id="可解问题："><a href="#可解问题：" class="headerlink" title="可解问题："></a>可解问题：</h1><p>bfs适合解决最少步数的问题。<br><a href="https://blog.csdn.net/weixin_44343282/article/details/104472618" target="_blank" rel="noopener">一维跳棋</a><br><a href="https://blog.csdn.net/weixin_44343282/article/details/104491392" target="_blank" rel="noopener">八数码问题</a><br><a href="https://blog.csdn.net/weixin_44343282/article/details/104510750" target="_blank" rel="noopener">迷宫最小步数</a></p>
-<a id="more"></a>
-
-<h1 id="专题要点："><a href="#专题要点：" class="headerlink" title="专题要点："></a>专题要点：</h1><p>在使用bfs时，思考方式<strong>从节点存储的数据</strong>、<strong>边界</strong>、<strong>入队的节点</strong>（哪些节点入队）、<strong>状态压缩</strong>、<strong>状态转移</strong>、<strong>判重</strong>这几方面入手。</p>
+        <h1 id="专题要点："><a href="#专题要点：" class="headerlink" title="专题要点："></a>专题要点：</h1><ul>
+<li><strong>编程实现数学算法</strong>：如欧几里得算法（最大公约数gcd）</li>
+<li><strong>模拟运算法则</strong>：如有理数（分数Fraction）四则运算，大整数（高精度）运算，更要注意细节的处理</li>
+<li><strong>取模，除法的思想</strong>：取模用于取某一数位的数值，除法用于分解原数（在进制转换和分解质因数运用）</li>
+<li><strong>判断素数的方法</strong><ul>
+<li>根号枚举法—— 能否整除2~sqrt(n)</li>
+<li>用素数打表得到的bool isPrime[]数组判断<a id="more"></a></li>
+</ul>
+</li>
+<li><strong>得到素数表的方法</strong>：<ul>
+<li>素数筛打表得到int prime[]</li>
+<li>暴力枚举，对范围内的数字做根号枚举法</li>
+</ul>
+</li>
+<li><strong>素数的应用</strong>：如分解质因子</li>
+<li><strong>扩展欧几里得，组合数</strong>：==建议还是学习完动态规划之后，心平气和的时候再看这部分，但愿之后我能记得回头再看一遍==<ul>
+<li><strong>扩展欧几里得</strong>：数学推导可以想明白，但编程实现起来还有些困难，数学证明看得头大，尤其是前者引入了很多新的数学专业名词；</li>
+<li><strong>组合数</strong>：总体比扩展欧几里得容易理解，中间递推公式编程涉及动态规划的思想</li>
+</ul>
+</li>
+</ul>
+<h1 id="可解问题："><a href="#可解问题：" class="headerlink" title="可解问题："></a>可解问题：</h1><ul>
+<li>有些数学问题确实不容易思考，需要数学的思想考虑问题如乙组1049（找规律）和甲组1049（分析每一位出现“1”的次数）</li>
+</ul>
+<p><a href="https://blog.csdn.net/weixin_44343282/article/details/104881549" target="_blank" rel="noopener">素数打表+二次探测再散列</a><br><a href="https://blog.csdn.net/weixin_44343282/article/details/104894783" target="_blank" rel="noopener">连续因数分解</a></p>
+<h1 id="细节注意："><a href="#细节注意：" class="headerlink" title="细节注意："></a>细节注意：</h1><ul>
+<li><p><strong>gcd(a, b)</strong>：算法结束后，a中存放的是最大公约数，b为0</p>
+</li>
+<li><p><strong>几个数据结构体</strong>：</p>
 <ul>
-<li><strong>节点</strong>：bfs大多需要节点存储其所在的层数step（即步数）,队首元素的step+1即为当前节点的step，然后入队。除此之外可根据题意存储坐标，序列状态，序列hash值等。</li>
-<li><strong>边界</strong>：根据题意来判断何时跳出while循环，如序列满足题目要求或是迷宫到达终点或是计数器达到一定值。</li>
-<li><strong>入队节点</strong>：即哪些节点入队，或者说队列中存储的是什么，对什么进行搜索遍历。一般要考虑与当前节点直接相连的点（有关联的点、能直接到达，直接遍历到的点），并且满足条件（在规定范围内）即可入队。</li>
-<li><strong>状态压缩</strong>：将复杂的数据压缩成简单的数据结构（降维），以方便遍历过程中的访问和修改。类似八数码问题，将3*3矩阵压缩成一维字符串或者数组进行存储。</li>
-<li><strong>状态转移</strong>：此处的状态转移是指遍历的方向和过程，如迷宫的上下左右四个方向，跳棋的左右两个格子，并将其转换为坐标的形式 ，以便进行查找访问。</li>
-<li><strong>判重</strong>：此处为入队判重而非访问判重。区别在于：<ul>
-<li><strong>判重代码的位置区别</strong>：入队判重是在入队后就执行判重代码，访问判重是在访问到队首元素后再执行判重代码。</li>
-<li><strong>对bfs过程的影响</strong>：如果设置成是否已被访问，有可能在某个节点正在队列中（但还未访问）时由于其他节点可以到达它而将这个节点再次入队，导致很多节点反复入队。<br>因此要对已入队的结点进行标记，防止重复访问。</li>
+<li>分数（分子up，分母down）</li>
+<li>质因数（质因子x，其个数cnt）</li>
+<li>大整数（数字各位数d[]，数字长度len）</li>
+</ul>
+</li>
+<li><p><strong>有理数四则运算</strong>：</p>
+<ul>
+<li><strong>分数的化简</strong>：<pre><code>* 分数为负
+* 分子为0
+* 约分（gcd）</code></pre></li>
+<li><strong>分数除法</strong>：特判分母为0的情况</li>
+<li><strong>分数输出</strong>：注意if，else if，else的先后顺序<ul>
+<li>先判断整数（分母为1）输出</li>
+<li>其次假分数转换为带分数输出</li>
+<li>最后真分数输出</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>大整数四则运算</strong>：</p>
+<ul>
+<li><strong>加法，乘法</strong>：注意处理最后一次进位的问题</li>
+<li><strong>减法，除法</strong>：注意处理高位为0的问题，还有除法的余数问题</li>
+<li><strong>负数处理</strong></li>
+</ul>
+</li>
+<li><p><strong>素数</strong>：</p>
+<ul>
+<li><strong>sqrt(1.0 * n)</strong>:参数应为浮点数 </li>
+<li><strong>使用素数筛注意i，j的范围</strong>：均小于maxn，==含义是枚举maxn范围内的所有素数==</li>
+<li><strong>要对0，1做特判</strong>：这两个数字均不是素数</li>
+<li><strong>打表时，要注意isPrime[]与prime[]数组大小</strong></li>
+</ul>
+</li>
+<li><p><strong>分解质因数</strong>:</p>
+<ul>
+<li><strong>数据结构</strong>：结构体数组的含义</li>
+<li><strong>特判</strong>：对质数的分解<h1 id="个人做题的几点注意："><a href="#个人做题的几点注意：" class="headerlink" title="个人做题的几点注意："></a>个人做题的几点注意：</h1></li>
+</ul>
+</li>
+<li><p>个人逻辑不够清晰，if，while位置先后顺序不合理，有时候不清楚应该先判断什么，会造成重复和代码冗余</p>
+</li>
+<li><p>边界细节问题分析不到位，处理不好，数组范围也总出问题</p>
+</li>
+<li><p><strong>关于素数</strong>：</p>
+<ul>
+<li><strong>区别int prime[]与bool isPrime[]数组</strong>：前者只包含素数，后者包含所有的数字，因此如果根据isPrime判断素数的话，需要将isPrime[]开的大一些，以至于大到可以包含范围内所有要枚举的数（包括合数）。例如枚举100内的素数，isPrime[]必须超过100，但prime可以开到30，因为100以内的素数只有25个</li>
+</ul>
+</li>
+<li><p><strong>素数表与根号枚举优劣</strong>：</p>
+<ul>
+<li><p>素数表效率高（O(nloglogn)），占用较多的空间，尤其是isPrime[]，并且数组大小决定了数据范围的大小；</p>
+</li>
+<li><p>根号枚举法（开根号sqrt()计算）数据范围更大，效率较低；</p>
+</li>
+<li><p>根号枚举法（i * i &lt; n），当i达到10^9^会溢出，应该使用long long</p>
+</li>
+<li><p><strong>两种较易理解的素数打表方式</strong>：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> prime[maxn], pNum;<span class="comment">//素数表与素数表长度</span></span><br><span class="line"><span class="keyword">bool</span> isPrime[maxn];<span class="comment">//是否是素数</span></span><br><span class="line"><span class="built_in">memset</span>(isPrime, <span class="literal">true</span>, <span class="keyword">sizeof</span>(isPrime));<span class="comment">//默认置0</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">findPrime</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	isPrime[<span class="number">0</span>] = isPrime[<span class="number">1</span>] = <span class="literal">false</span>;<span class="comment">//不是素数</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; maxn; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(isPrime[i])<span class="comment">//i是素数</span></span><br><span class="line">		&#123;</span><br><span class="line">			prime[pNum++] = i;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = i + i; j &lt; maxn; j += i)</span><br><span class="line">			&#123;</span><br><span class="line">				isPrime[j] = <span class="literal">false</span>;<span class="comment">//是合数</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">100005</span>;</span><br><span class="line"><span class="keyword">int</span> prime[maxn], pNum;</span><br><span class="line"><span class="keyword">bool</span> isSift[maxn];<span class="comment">//是否被筛掉，true为被筛掉，筛掉的是合数，false是素数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">findPrime</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	isSift[<span class="number">0</span>] = isSift[<span class="number">1</span>] = <span class="literal">true</span>;<span class="comment">//特判筛去</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; maxn; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(isSift[i] == <span class="literal">false</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			prime[pNum++] = i;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = i + i; j &lt; maxn; j += i)</span><br><span class="line">			&#123;</span><br><span class="line">				isSift[j] = <span class="literal">true</span>;<span class="comment">//筛去</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>
@@ -303,7 +379,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2BFS-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/17/%E5%85%A5%E9%97%A8%E7%AF%87-%E6%95%B0%E5%AD%A6%E9%97%AE%E9%A2%98-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -317,18 +393,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/03/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%B6%E6%9F%A5%E9%9B%86%EF%BC%88%E6%A0%91%E7%BB%93%E6%9E%84%E7%AB%A0%E8%8A%82%EF%BC%89-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          提高篇-并查集（树结构章节）-《算法笔记》同步笔记总结与补充
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2DFS%E4%B8%8E%E5%89%AA%E6%9E%9D-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">提高篇-深度优先搜索DFS与剪枝-《算法笔记》同步笔记总结与补充</div>
+    <a href="/2020/03/12/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%9B%BE%E8%AE%BA-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">提高篇-图论-《算法笔记》同步笔记总结与补充</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -355,7 +422,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#可解问题："><span class="toc-number">1.</span> <span class="toc-text">可解问题：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#专题要点："><span class="toc-number">2.</span> <span class="toc-text">专题要点：</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#专题要点："><span class="toc-number">1.</span> <span class="toc-text">专题要点：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#可解问题："><span class="toc-number">2.</span> <span class="toc-text">可解问题：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#细节注意："><span class="toc-number">3.</span> <span class="toc-text">细节注意：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#个人做题的几点注意："><span class="toc-number">4.</span> <span class="toc-text">个人做题的几点注意：</span></a></li></ol>
                     </div>
                 </span>
             </div>
