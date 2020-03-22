@@ -158,6 +158,244 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-提高篇-深度优先搜索DFS与剪枝-《算法笔记》同步笔记总结与补充" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2DFS%E4%B8%8E%E5%89%AA%E6%9E%9D-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/">提高篇-深度优先搜索DFS与剪枝-《算法笔记》同步笔记总结与补充</a>
+    </h1>
+  
+
+        
+        
+	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+<a href="/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2DFS%E4%B8%8E%E5%89%AA%E6%9E%9D-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" class="archive-article-date">
+  	<time datetime="2020-03-02T13:10:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-02</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>搜索作为算法的开篇需要彻底吃透，因此搜索专题将dfs与bfs分开进行总结。<br>在练习dfs之前，必须要将递归吃透，自己能力还是有限，递归部分一直很困扰我，这次要花费大量时间，彻底将递归和dfs吃透弄懂！
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法总结</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2DFS%E4%B8%8E%E5%89%AA%E6%9E%9D-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/">查看全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-提高篇-链表处理-《算法笔记》同步笔记总结与补充" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E9%93%BE%E8%A1%A8%E5%A4%84%E7%90%86-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/">提高篇-链表处理-《算法笔记》同步笔记总结与补充</a>
+    </h1>
+  
+
+        
+        
+	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+<a href="/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E9%93%BE%E8%A1%A8%E5%A4%84%E7%90%86-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" class="archive-article-date">
+  	<time datetime="2020-03-02T13:09:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-02</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>时隔两个月再次拾起来算法，用链表找找感觉</p>
+<h1 id="专题要点："><a href="#专题要点：" class="headerlink" title="专题要点："></a>专题要点：</h1><p>在初学C时，一旦涉及指针和链表准懵。其实链表是一个数据结构，是一种思想，对于离散存储的数据可以顺序访问。<br>链表分为动态链表和静态链表，动态链表是通过指针进行访问的，静态链表是通过数组下标进行访问的。本章节主要以静态链表为主，中间涉及对静态链表的排序问题。
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法总结</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E9%93%BE%E8%A1%A8%E5%A4%84%E7%90%86-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/">查看全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-入门篇-字符串处理-《算法笔记》同步笔记总结与补充" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/02/%E5%85%A5%E9%97%A8%E7%AF%87-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/">入门篇-字符串处理--《算法笔记》同步笔记总结与补充</a>
+    </h1>
+  
+
+        
+        
+	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+<a href="/2020/03/02/%E5%85%A5%E9%97%A8%E7%AF%87-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" class="archive-article-date">
+  	<time datetime="2020-03-02T13:08:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-02</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="专题要点："><a href="#专题要点：" class="headerlink" title="专题要点："></a>专题要点：</h1><p>本专题极其考验代码能力，逻辑能力与分析能力。我个人认为这一专题是区分新手和入门的分界线。许多新手出现的问题是：初看题目比较简单，易懂，但在字符串的输入输出就卡住了（字符串与字符数组的输入输出问题）；许多入门的“新手”也有一些问题是：初看题目比较简单，但越分析越复杂，越分析越毫无头绪，导致最后心态炸裂。文章最后我在补充重新总结两道比较让我觉得费脑子的题目。
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法总结</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/02/%E5%85%A5%E9%97%A8%E7%AF%87-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/">查看全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-C-STL-《算法笔记》同步笔记总结与补充" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -684,244 +922,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/03/02/%E5%85%A5%E9%97%A8%E7%AF%87-%E5%9B%BE%E5%BD%A2%E8%BE%93%E5%87%BA-%E6%97%A5%E6%9C%9F%E9%97%AE%E9%A2%98-%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/">查看全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-入门篇-查找元素-《算法笔记》同步笔记总结与补充" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/02/%E5%85%A5%E9%97%A8%E7%AF%87-%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/">入门篇-查找元素--《算法笔记》同步笔记总结与补充</a>
-    </h1>
-  
-
-        
-        
-	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
-        </span>
-<a href="/2020/03/02/%E5%85%A5%E9%97%A8%E7%AF%87-%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" class="archive-article-date">
-  	<time datetime="2020-03-02T12:59:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-02</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="专题要点"><a href="#专题要点" class="headerlink" title="专题要点"></a>专题要点</h1><p>本专题与第四章散列有点类似，主要目的是尽可能把查找元素的时间降低到O(1)，常用到一些散列方法，结构体排序等。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法总结</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/02/%E5%85%A5%E9%97%A8%E7%AF%87-%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/">查看全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-入门篇-简单模拟-《算法笔记》同步笔记总结与补充" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/02/%E5%85%A5%E9%97%A8%E7%AF%87-%E7%AE%80%E5%8D%95%E6%A8%A1%E6%8B%9F-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/">入门篇-简单模拟--《算法笔记》同步笔记总结与补充</a>
-    </h1>
-  
-
-        
-        
-	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
-        </span>
-<a href="/2020/03/02/%E5%85%A5%E9%97%A8%E7%AF%87-%E7%AE%80%E5%8D%95%E6%A8%A1%E6%8B%9F-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" class="archive-article-date">
-  	<time datetime="2020-03-02T12:58:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-02</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="专题要点："><a href="#专题要点：" class="headerlink" title="专题要点："></a>专题要点：</h1><p>对算法要求不高，主要是对代码能力，细节处理，题意理解，合理的数据结构（一维多维数组，结构体）的掌握与运用</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法总结</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/02/%E5%85%A5%E9%97%A8%E7%AF%87-%E7%AE%80%E5%8D%95%E6%A8%A1%E6%8B%9F-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/">查看全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-PAT甲组1066-Root-of-AVL-Tree" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/02/PAT%E7%94%B2%E7%BB%841066-Root-of-AVL-Tree/">PAT甲组1066.Root of AVL Tree</a>
-    </h1>
-  
-
-        
-        
-	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
-        </span>
-<a href="/2020/03/02/PAT%E7%94%B2%E7%BB%841066-Root-of-AVL-Tree/" class="archive-article-date">
-  	<time datetime="2020-03-02T08:17:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-02</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="A1066"><a href="#A1066" class="headerlink" title="A1066"></a>A1066</h1><p><a href="https://pintia.cn/problem-sets/994805342720868352/problems/994805404939173888" target="_blank" rel="noopener">题目链接</a></p>
-<h2 id="个人思路"><a href="#个人思路" class="headerlink" title="个人思路"></a>个人思路</h2><p>构造平衡二叉树解题。最开始在新建节点Node* newNode(int v){}函数，忘记写返回值了，一直再报段错误，寻思着也没有数组，咋回越界呢，废了半天劲才找到错误。
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PAT</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/02/PAT%E7%94%B2%E7%BB%841066-Root-of-AVL-Tree/">查看全文 >></a>
         </p>
       
 
