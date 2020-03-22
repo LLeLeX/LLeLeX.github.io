@@ -16,7 +16,7 @@
 <meta property="og:description" content="专题要点：树状数组结构仍是普通数组，但在数组中的查询和更新过程类似于树状  核心函数运算 lowbit(i) ((i) &amp; (-i))的三种解释： 求i元素的二进制形式中最右侧“1”的位置；等价于求元素i的因数，且该因数是最大2的幂次；或者说是能被i整除的最大的2的幂次 数据结构：int c[]：表示存放i号位之前lowbit(i)个元素和 功能： getSum(int x)：求x之前所有">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-03-22T04:01:57.000Z">
-<meta property="article:modified_time" content="2020-03-22T04:02:12.483Z">
+<meta property="article:modified_time" content="2020-03-22T05:23:21.332Z">
 <meta property="article:author" content="LLeLeX">
 <meta property="article:tag" content="算法总结">
 <meta name="twitter:card" content="summary">
@@ -204,6 +204,8 @@
 <li><strong>如何统计个数</strong>：当元素输入后，每次加一统计个数，update(x, 1)</li>
 <li><strong>为什么使用getSum(x)能得到左侧小于x的元素个数</strong>：因为c[]是递增的，getSum()访问的是x左侧元素（x左侧元素均小于x），求和统计次数即为小于x的元素个数</li>
 </ul>
+<a id="more"></a>
+
 <h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lowbit(i) ((i) &amp; (-i))</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> T;</span><br><span class="line"><span class="keyword">int</span> c[maxn];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = x; i &lt; maxn; i += lowbit(i))</span><br><span class="line">	&#123;</span><br><span class="line">		c[i] += v;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getSum</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = x; i &gt; <span class="number">0</span>; i -= lowbit(i))</span><br><span class="line">	&#123;</span><br><span class="line">		sum += c[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getKth</span><span class="params">(<span class="keyword">int</span> K)</span><span class="comment">//二分查找，寻找第一个满足getSum(i) &gt;= K的i </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> l = <span class="number">1</span>, r = maxn, mid;</span><br><span class="line">	<span class="keyword">while</span>(l &lt; r)</span><br><span class="line">	&#123;</span><br><span class="line">		mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(getSum(mid) &gt;= K)</span><br><span class="line">		&#123;</span><br><span class="line">			r = mid;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			l = mid + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> l;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
@@ -479,11 +481,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">思路梳理</a>
+                <a href="javascript:void(0)" class="js-tag color5">算法总结</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">算法总结</a>
+                <a href="javascript:void(0)" class="js-tag color5">思路梳理</a>
               </li>
              
               <li class="article-tag-list-item">
