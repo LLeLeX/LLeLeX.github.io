@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>提高篇-广度优先搜索BFS-《算法笔记》同步笔记总结与补充 | LLeLeX&#39;s Blog</title>
+  <title>提高篇-动态规划-《算法笔记》同步笔记总结与补充 | LLeLeX&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="bfs算法比较高效，由于需要使用队列容器，可能会导致运行速度不太乐观 可解问题：bfs适合解决最少步数的问题。一维跳棋八数码问题迷宫最小步数">
+  <meta name="description" content="这已经是本人第三遍学习动态规划了，其实现在脑子里还是乱糟糟的，容我想想怎么总结能有所收获，有所提升。第一遍单纯地比葫芦画瓢，留下的印象只是要具体问题具体分析，状态转移方程各不相同；第二遍对DP有了较为系统地认识，认识到了贪心只能达到局部最优，DP可以得到全局最优解；认识到了自底向上分析问题；认识到了状态转移的过程和分析；认识到了逆向求解决策选择情况。第三遍感觉比前两次有所提升，却还是有点讲不明白到">
 <meta property="og:type" content="article">
-<meta property="og:title" content="提高篇-广度优先搜索BFS-《算法笔记》同步笔记总结与补充">
-<meta property="og:url" content="http://yoursite.com/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2BFS-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/index.html">
+<meta property="og:title" content="提高篇-动态规划-《算法笔记》同步笔记总结与补充">
+<meta property="og:url" content="http://yoursite.com/2020/03/27/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/index.html">
 <meta property="og:site_name" content="LLeLeX&#39;s Blog">
-<meta property="og:description" content="bfs算法比较高效，由于需要使用队列容器，可能会导致运行速度不太乐观 可解问题：bfs适合解决最少步数的问题。一维跳棋八数码问题迷宫最小步数">
+<meta property="og:description" content="这已经是本人第三遍学习动态规划了，其实现在脑子里还是乱糟糟的，容我想想怎么总结能有所收获，有所提升。第一遍单纯地比葫芦画瓢，留下的印象只是要具体问题具体分析，状态转移方程各不相同；第二遍对DP有了较为系统地认识，认识到了贪心只能达到局部最优，DP可以得到全局最优解；认识到了自底向上分析问题；认识到了状态转移的过程和分析；认识到了逆向求解决策选择情况。第三遍感觉比前两次有所提升，却还是有点讲不明白到">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-03-02T13:11:15.000Z">
-<meta property="article:modified_time" content="2020-03-02T13:11:43.257Z">
+<meta property="article:published_time" content="2020-03-27T02:59:09.000Z">
+<meta property="article:modified_time" content="2020-03-27T02:59:41.255Z">
 <meta property="article:author" content="LLeLeX">
 <meta property="article:tag" content="算法总结">
 <meta name="twitter:card" content="summary">
@@ -161,14 +161,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-提高篇-广度优先搜索BFS-《算法笔记》同步笔记总结与补充" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-提高篇-动态规划-《算法笔记》同步笔记总结与补充" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      提高篇-广度优先搜索BFS-《算法笔记》同步笔记总结与补充
+      提高篇-动态规划-《算法笔记》同步笔记总结与补充
     </h1>
   
 
@@ -177,8 +177,8 @@
 	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
-<a href="/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2BFS-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" class="archive-article-date">
-  	<time datetime="2020-03-02T13:11:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-02</time>
+<a href="/2020/03/27/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" class="archive-article-date">
+  	<time datetime="2020-03-27T02:59:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-27</time>
 </a>
 
         
@@ -186,24 +186,43 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>bfs算法比较高效，由于需要使用队列容器，可能会导致运行速度不太乐观</p>
-<h1 id="可解问题："><a href="#可解问题：" class="headerlink" title="可解问题："></a>可解问题：</h1><p>bfs适合解决最少步数的问题。<br><a href="https://blog.csdn.net/weixin_44343282/article/details/104472618" target="_blank" rel="noopener">一维跳棋</a><br><a href="https://blog.csdn.net/weixin_44343282/article/details/104491392" target="_blank" rel="noopener">八数码问题</a><br><a href="https://blog.csdn.net/weixin_44343282/article/details/104510750" target="_blank" rel="noopener">迷宫最小步数</a></p>
-<a id="more"></a>
-
-<h1 id="专题要点："><a href="#专题要点：" class="headerlink" title="专题要点："></a>专题要点：</h1><p>在使用bfs时，思考方式<strong>从节点存储的数据</strong>、<strong>边界</strong>、<strong>入队的节点</strong>（哪些节点入队）、<strong>状态压缩</strong>、<strong>状态转移</strong>、<strong>判重</strong>这几方面入手。</p>
+        <p>这已经是本人第三遍学习动态规划了，其实现在脑子里还是乱糟糟的，容我想想怎么总结能有所收获，有所提升。<br>第一遍单纯地比葫芦画瓢，留下的印象只是要具体问题具体分析，状态转移方程各不相同；<br>第二遍对DP有了较为系统地认识，认识到了贪心只能达到局部最优，DP可以得到全局最优解；认识到了自底向上分析问题；认识到了状态转移的过程和分析；认识到了逆向求解决策选择情况。<br>第三遍感觉比前两次有所提升，却还是有点讲不明白到底具体学到了什么，也不想在这里写长篇大论或者都会提及的概念。<br>通过这篇博客捋一下思路，写一下新的收获和对DP的认识</p>
+<p>本章题目使用递归和递推两种方式编写代码，随后会将代码放在github上<br><a href="https://github.com/LLeLeX/PAT-Algorithm/tree/master/%E5%85%B6%E4%BB%96/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E8%AE%B2%E4%B9%89/11%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92" target="_blank" rel="noopener">传送站</a><a id="more"></a></p>
+<h1 id="专题要点："><a href="#专题要点：" class="headerlink" title="专题要点："></a>专题要点：</h1><p><strong>动态规划不是一种算法，而应该是一种解决问题的思想</strong></p>
 <ul>
-<li><strong>节点</strong>：bfs大多需要节点存储其所在的层数step（即步数）,队首元素的step+1即为当前节点的step，然后入队。除此之外可根据题意存储坐标，序列状态，序列hash值等。</li>
-<li><strong>边界</strong>：根据题意来判断何时跳出while循环，如序列满足题目要求或是迷宫到达终点或是计数器达到一定值。</li>
-<li><strong>入队节点</strong>：即哪些节点入队，或者说队列中存储的是什么，对什么进行搜索遍历。一般要考虑与当前节点直接相连的点（有关联的点、能直接到达，直接遍历到的点），并且满足条件（在规定范围内）即可入队。</li>
-<li><strong>状态压缩</strong>：将复杂的数据压缩成简单的数据结构（降维），以方便遍历过程中的访问和修改。类似八数码问题，将3*3矩阵压缩成一维字符串或者数组进行存储。</li>
-<li><strong>状态转移</strong>：此处的状态转移是指遍历的方向和过程，如迷宫的上下左右四个方向，跳棋的左右两个格子，并将其转换为坐标的形式 ，以便进行查找访问。</li>
-<li><strong>判重</strong>：此处为入队判重而非访问判重。区别在于：<ul>
-<li><strong>判重代码的位置区别</strong>：入队判重是在入队后就执行判重代码，访问判重是在访问到队首元素后再执行判重代码。</li>
-<li><strong>对bfs过程的影响</strong>：如果设置成是否已被访问，有可能在某个节点正在队列中（但还未访问）时由于其他节点可以到达它而将这个节点再次入队，导致很多节点反复入队。<br>因此要对已入队的结点进行标记，防止重复访问。</li>
+<li>试着复述一下，区分明确一下相关概念：子问题，重叠子问题，最优子结构，阶段，决策，状态，状态转移方程</li>
+<li><strong>dp问题的两种写法：递归和递推</strong>（本章题目均用两种方法实现了一下）<ul>
+<li>递推是自底向上实现的（底即为边界）；递归是自顶而下实现的（递归的性质，走到边界后，不断向上回退）</li>
+<li>使用递归实际上是用递归来替代递推中的一层循环，递归的参数是原递推方法中的外循环遍历和内循环变量</li>
 </ul>
 </li>
+<li><strong>dp与贪心</strong><ul>
+<li>贪心法是自顶向下考虑问题，也是最符合人们的正常思维的，动态规划之所以难懂就是其不太正常的考虑问题的方式；</li>
+<li>另外贪心法只顾眼前，不考虑全局，往往得到的是局部最优解，动规是全局考虑，贪心法往往可以高效地求出近似解</li>
 </ul>
+</li>
+<li><strong>dp与分治</strong>：尽管都是子问题，但分治法的子问题不重叠，每个子问题都是新出现的，就算存下来备忘录也无法解决</li>
+<li><strong>在dp问题求解过程中，序列中越靠前的数据，其dp[]值得计算就越靠后</strong>，原因在于自底向上的计算方式，因此在对字典序输出有要求时，要考虑到这一点</li>
+</ul>
+<p><strong>比较完整地分析dp问题的思考方法</strong>：<br>这篇文章比较清晰易懂，值得一看帮助理解<br><a href="https://www.cnblogs.com/sdjl/articles/1274312.html" target="_blank" rel="noopener">通过金矿模型介绍动态规划</a></p>
+<pre><code>1、构造问题所对应的过程。
 
+2、思考过程的最后一个步骤，看看有哪些选择情况。
+
+3、找到最后一步的子问题，确保符合“子问题重叠”，**把子问题中不相同的地方设置为参数**。
+
+4、使得子问题符合“最优子结构”。
+
+5、找到边界，考虑边界的各种处理方式。
+
+6、确保满足“子问题独立”，一般而言，如果我们是在多个子问题中选择一个作为实施方案，而不会同时实施多个方案，那么子问题就是独立的。
+
+7、考虑如何做备忘录。
+
+8、分析所需时间是否满足要求。
+
+9、写出转移方程式。
+https://www.cnblogs.com/sdjl/articles/1274312.html</code></pre>
       
 
       
@@ -303,7 +322,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2BFS-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/27/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -317,18 +336,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/03/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%B6%E6%9F%A5%E9%9B%86%EF%BC%88%E6%A0%91%E7%BB%93%E6%9E%84%E7%AB%A0%E8%8A%82%EF%BC%89-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/03/27/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%93%E9%A2%98-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          提高篇-并查集（树结构章节）-《算法笔记》同步笔记总结与补充
+          提高篇-字符串专题-《算法笔记》同步笔记总结与补充
         
       </div>
     </a>
   
   
-    <a href="/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2DFS%E4%B8%8E%E5%89%AA%E6%9E%9D-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">提高篇-深度优先搜索DFS与剪枝-《算法笔记》同步笔记总结与补充</div>
+    <a href="/2020/03/22/%E4%B8%93%E9%A1%B9%E6%89%A9%E5%B1%95-%E5%BF%AB%E4%B9%90%E6%A8%A1%E6%8B%9F%EF%BC%88%E5%85%A8%E7%BA%BF%E5%B4%A9%E7%9B%98%EF%BC%81%E4%B8%80%E7%82%B9%E9%83%BD%E4%B8%8D%E5%BF%AB%E4%B9%90%EF%BC%81%EF%BC%89-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">专项扩展-快乐模拟（全线崩盘！一点都不快乐！）-《算法笔记》同步笔记总结与补充</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -355,7 +374,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#可解问题："><span class="toc-number">1.</span> <span class="toc-text">可解问题：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#专题要点："><span class="toc-number">2.</span> <span class="toc-text">专题要点：</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#专题要点："><span class="toc-number">1.</span> <span class="toc-text">专题要点：</span></a></li></ol>
                     </div>
                 </span>
             </div>

@@ -245,6 +245,179 @@
 
 
   
+    <article id="post-提高篇-字符串专题-《算法笔记》同步笔记总结与补充" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/27/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%93%E9%A2%98-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/">提高篇-字符串专题-《算法笔记》同步笔记总结与补充</a>
+    </h1>
+  
+
+        
+        
+	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+<a href="/2020/03/27/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%93%E9%A2%98-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" class="archive-article-date">
+  	<time datetime="2020-03-27T03:00:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-27</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本章内容有点极端，字符串hash难度一般，理解起来问题不大，即利用素数和大数做hash散列避免冲突，之前八数码问题也使用过康拓展开式标识唯一的字符串；KMP学过三遍了，理解起来还是废了番功夫，重点仍然是next[]数组的含义和求解，除此之外增加了统计子串出现的次数，优化next[]数组，有限状态机解释KMP算法（对理解很有帮助）</p>
+<h1 id="专题要点："><a href="#专题要点：" class="headerlink" title="专题要点："></a>专题要点：</h1><ul>
+<li><p><strong>字符串hash</strong>：hash[i] = (hash[i - 1] * p + index(str[i])) % mod</p>
+<ul>
+<li><p>从进制转换的角度理解，<strong>hash是p进制转换为十进制的数字</strong>，<strong>把hash[i - 1]当做p进制，并将其转换为十进制</strong>，加上str[i]的int类型，对mod取余</p>
+</li>
+<li><p><strong>hash[]的理解</strong>：hash[i]表示从str[0~i]子串的hash值，hash[length - 1]（length是字符串的长度）表示整个字符串的hash值</p>
+</li>
+<li><p><strong>几个数据结构</strong>：</p>
+<ul>
+<li><p>powP[]:存放p^i^%mod的计算结果，便于求子串hash值直接访问，其中powP[0] = 1</p>
+</li>
+<li><p>hash[]:表示从str[0~i]子串的hash值</p>
+</li>
+<li><p>vector&lt;pair&lt;int, int&gt; &gt;sub:存放所有&lt;子串hash值，子串长度&gt;</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法总结</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/27/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%93%E9%A2%98-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/">查看全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-提高篇-动态规划-《算法笔记》同步笔记总结与补充" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/27/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/">提高篇-动态规划-《算法笔记》同步笔记总结与补充</a>
+    </h1>
+  
+
+        
+        
+	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+<a href="/2020/03/27/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" class="archive-article-date">
+  	<time datetime="2020-03-27T02:59:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-27</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这已经是本人第三遍学习动态规划了，其实现在脑子里还是乱糟糟的，容我想想怎么总结能有所收获，有所提升。<br>第一遍单纯地比葫芦画瓢，留下的印象只是要具体问题具体分析，状态转移方程各不相同；<br>第二遍对DP有了较为系统地认识，认识到了贪心只能达到局部最优，DP可以得到全局最优解；认识到了自底向上分析问题；认识到了状态转移的过程和分析；认识到了逆向求解决策选择情况。<br>第三遍感觉比前两次有所提升，却还是有点讲不明白到底具体学到了什么，也不想在这里写长篇大论或者都会提及的概念。<br>通过这篇博客捋一下思路，写一下新的收获和对DP的认识</p>
+<p>本章题目使用递归和递推两种方式编写代码，随后会将代码放在github上<br><a href="https://github.com/LLeLeX/PAT-Algorithm/tree/master/%E5%85%B6%E4%BB%96/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E8%AE%B2%E4%B9%89/11%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92" target="_blank" rel="noopener">传送站</a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法总结</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/27/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/">查看全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-专项扩展-快乐模拟（全线崩盘！一点都不快乐！）-《算法笔记》同步笔记总结与补充" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -861,171 +1034,6 @@
 
 
   
-    <article id="post-提高篇-并查集（树结构章节）-《算法笔记》同步笔记总结与补充" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/03/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%B6%E6%9F%A5%E9%9B%86%EF%BC%88%E6%A0%91%E7%BB%93%E6%9E%84%E7%AB%A0%E8%8A%82%EF%BC%89-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/">提高篇-并查集（树结构章节）-《算法笔记》同步笔记总结与补充</a>
-    </h1>
-  
-
-        
-        
-	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
-        </span>
-<a href="/2020/03/03/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%B6%E6%9F%A5%E9%9B%86%EF%BC%88%E6%A0%91%E7%BB%93%E6%9E%84%E7%AB%A0%E8%8A%82%EF%BC%89-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" class="archive-article-date">
-  	<time datetime="2020-03-03T12:47:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-03</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="专题要点："><a href="#专题要点：" class="headerlink" title="专题要点："></a>专题要点：</h1><p><strong>并查集即集合，其主要作用为:合并与查找</strong></p>
-<ul>
-<li><p><strong>并查集可以抽象为树结构</strong>，并具有与树类似的性质如：具有根节点的概念，结构无环并满足（N个结点N-1条边，下文题目通信系统用到这一特性）</p>
-</li>
-<li><p><strong>并查集初始化的意义</strong>：对元素顺序赋值进行初始化。即将所有的元素视为相互独立的集合，便于之后的合并数组（合并只对不同集合的元素进行合并）</p>
-</li>
-<li><p><strong>并查集的数据结构father[]的含义</strong>：第i个元素的根节点为father[i]，通过<strong>路径压缩</strong>，将father[]中父节点更新完根节点，提高查找效率</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法总结</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/03/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%B6%E6%9F%A5%E9%9B%86%EF%BC%88%E6%A0%91%E7%BB%93%E6%9E%84%E7%AB%A0%E8%8A%82%EF%BC%89-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/">查看全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-提高篇-广度优先搜索BFS-《算法笔记》同步笔记总结与补充" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2BFS-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/">提高篇-广度优先搜索BFS-《算法笔记》同步笔记总结与补充</a>
-    </h1>
-  
-
-        
-        
-	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
-        </span>
-<a href="/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2BFS-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/" class="archive-article-date">
-  	<time datetime="2020-03-02T13:11:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-02</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>bfs算法比较高效，由于需要使用队列容器，可能会导致运行速度不太乐观</p>
-<h1 id="可解问题："><a href="#可解问题：" class="headerlink" title="可解问题："></a>可解问题：</h1><p>bfs适合解决最少步数的问题。<br><a href="https://blog.csdn.net/weixin_44343282/article/details/104472618" target="_blank" rel="noopener">一维跳棋</a><br><a href="https://blog.csdn.net/weixin_44343282/article/details/104491392" target="_blank" rel="noopener">八数码问题</a><br><a href="https://blog.csdn.net/weixin_44343282/article/details/104510750" target="_blank" rel="noopener">迷宫最小步数</a></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法总结</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/02/%E6%8F%90%E9%AB%98%E7%AF%87-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2BFS-%E3%80%8A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E3%80%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A1%A5%E5%85%85/">查看全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1134,11 +1142,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">算法总结</a>
+                <a href="javascript:void(0)" class="js-tag color5">思路梳理</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">思路梳理</a>
+                <a href="javascript:void(0)" class="js-tag color5">算法总结</a>
               </li>
              
               <li class="article-tag-list-item">
